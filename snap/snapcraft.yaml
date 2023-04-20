@@ -1,5 +1,6 @@
 name: ascendfcu
-adopt-info: ascendfcu
+#adopt-info: ascendfcu
+version: '1.0'
 summary: An Electron app for AscendFCU
 description: |
   An unofficial Electron application to manage your online banking with Ascend Federal Credit Union
@@ -32,7 +33,3 @@ parts:
       nativefier --name AscendFCU --tray --single-instance --block-external-urls --clear-cache false https://ascend.org/
       mkdir -p $SNAPCRAFT_PART_INSTALL/bin/
       cp -r AscendFCU-linux-x64/ $SNAPCRAFT_PART_INSTALL/bin
-      
-    override-pull: |
-      snapcraftctl pull
-      snapcraftctl set-version "$(git describe --tags | sed 's/^v//' | cut -d "-" -f1)"                
