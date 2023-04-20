@@ -13,8 +13,8 @@ confinement: strict
 compression: lzo
 
 apps:
-  ascendfcu: https://github.com/kz6fittycent/ascendfcu
-    command: bin/AscendFCU-linux-x64/AscendFCU
+  ascendfcu: 
+  command: bin/AscendFCU-linux-x64/AscendFCU
     extensions:
       - gnome-3-38
     plugs:
@@ -23,7 +23,7 @@ apps:
       
 parts:
   ascendfcu:
-    source:
+    source: https://github.com/kz6fittycent/ascendfcu/
     source-type: git
     plugin: nil
     build-snaps:
