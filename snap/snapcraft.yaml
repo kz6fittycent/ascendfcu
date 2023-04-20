@@ -15,11 +15,11 @@ compression: lzo
 apps:
   ascendfcu: 
     command: bin/AscendFCU-linux-x64/AscendFCU
-      extensions:
-        - gnome-3-38
-      plugs:
-        - home
-        - network
+    extensions:
+      - gnome-3-38
+    plugs:
+      - home
+      - network
       
 parts:
   ascendfcu:
