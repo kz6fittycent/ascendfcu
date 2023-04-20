@@ -30,8 +30,8 @@ parts:
       - nativefier
     
     override-build: |
-      mkdir -p $BUILD
-      cd $BUILD
+      mkdir -p BUILD
+      cd BUILD
       nativefier --name AscendFCU --tray --single-instance --block-external-urls --clear-cache false https://ascend.org/
       mkdir -p $SNAPCRAFT_PART_INSTALL/bin/
       cp -r AscendFCU-linux-x64/ $SNAPCRAFT_PART_INSTALL/bin
