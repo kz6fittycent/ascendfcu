@@ -30,7 +30,9 @@ parts:
     plugin: nil
     build-snaps:
       - nativefier
-    
+    build-packages:
+      - libudev-dev
+      
     override-build: |
       echo $LD_LIBRARY_PATH
       nativefier --name AscendFCU --tray --single-instance --block-external-urls --clear-cache false https://ascend.org/
